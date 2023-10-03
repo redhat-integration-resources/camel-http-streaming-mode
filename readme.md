@@ -18,16 +18,15 @@ The repository includes code to validate Camel's streaming mode for:
 
 ## Use cases
 
-This repository covers two basic scenarios using Camel in streaming mode:
+> [!NOTE]  
+> Streaming mode opens up many interesting use cases, for example, data transformation on very large data structures, applying selective/discarding rules, split/merging of data, multiplexing data streams, and others.
 
-- HTTP downloads
-- HTTP uploads
+This repository only covers the basics of enabling streaming mode. The two implemented scenarios using Camel in streaming mode are:
+
+- HTTP data downloads
+- HTTP data uploads
 
 Camel may act as the end system responsible to locally/remotely store the data stream. Or it may also act as a proxy system, passing the responsibility downstream.
-
-> [!NOTE]  
-> Streaming mode opens up many other interesting use cases, for example, data transformation on very large data structures, applying selective/discarding rules, split/merging of data, multiplexing data streams and others. \
-> This repository only covers the basics of enabling streaming mode.
 
 The critical data handling happens in the numbered 1) and 2) positions illustrated below.
 
