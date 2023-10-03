@@ -26,16 +26,8 @@ This repository covers two basic scenarios using Camel in streaming mode:
 Camel may act as the end system responsible to locally/remotely store the data stream. Or it may also act as a proxy system, passing the responsibility downstream.
 
 > [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-
-!!! tip 
-    dgfsgdf
-
-> :information_source: fsdfsdf
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
+> Streaming mode opens up many other interesting use cases, for example, data transformation on very large data structures, applying selective/discarding rules, split/merging of data, multiplexing data streams and others. \
+> This repository only covers the basics of enabling streaming mode.
 
 The critical data handling happens in the numbered 1) and 2) positions illustrated below.
 
