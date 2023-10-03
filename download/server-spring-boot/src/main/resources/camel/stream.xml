@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- camel-k: language=xml -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://camel.apache.org/schema/spring"
+        xsi:schemaLocation="
+            http://camel.apache.org/schema/spring
+            https://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- Write your routes here, for example: -->
+    <route id="streaming">
+        <from uri="servlet:/test"/>
+
+        <!-- Streaming mode -->
+        <setBody>
+            <simple resultType="java.io.File">../data/input</simple>
+        </setBody>
+
+        <!-- Non-streaming mode -->
+        <!-- <to uri="language:constant:resource:file:../data/input"/> -->
+
+        <log message="responding with content."/>
+    </route>
+
+</routes>

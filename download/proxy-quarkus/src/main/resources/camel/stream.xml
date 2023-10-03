@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- camel-k: language=xml -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://camel.apache.org/schema/spring"
+        xsi:schemaLocation="
+            http://camel.apache.org/schema/spring
+            https://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- Write your routes here, for example: -->
+    <route id="streaming">
+        <from uri="servlet:/test?disableStreamCache=true"/>
+        <!-- <from uri="servlet:/test"/> -->
+
+        <log message="handling input stream"/>
+
+        <!-- Proxy data -->
+        <removeHeaders pattern="*"/>
+        <setHeader name="Content-Type">
+            <simple>application/octet-stream</simple>
+        </setHeader>
+        <to uri="http://localhost:8080/test?disableStreamCache=true"/>
+
+        <log message="done streaming"/>
+    </route>
+
+</routes>
