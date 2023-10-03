@@ -25,6 +25,9 @@ This repository covers two basic scenarios using Camel in streaming mode:
 
 Camel may act as the end system responsible to locally/remotely store the data stream. Or it may also act as a proxy system, passing the responsibility downstream.
 
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
 
 !!! tip 
     dgfsgdf
