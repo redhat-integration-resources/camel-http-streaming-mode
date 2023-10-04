@@ -9,7 +9,7 @@ Running a positive test
 
 To demonstrate Camel can handle larger data streams than memory allocated to the JVM, we need to start it with low memory settings.
 
-To run it follow the commads below:
+To run it follow the commands below:
 
 1. Package the project in a JAR file:
 
@@ -32,15 +32,15 @@ To run it follow the commads below:
 Running a negative test
 =======================
 
-By switching Camel's file reader we can prove Camel fails to handle large streams. Camel attemps to preload the data and throws an "out of memory error".
+We can replicate out-of-memory errors by using a different Camel file reader. When doing so Camel attempts to preload the full stream in memory and fail.
 
 To replicate the failure:
 
 1) Comment out the following code block:
 
-	<pollEnrich>
+	  <setBody>
       ...
-    </pollEnrich>
+    </setBody>
 
 2) Uncomment the following line:
 
